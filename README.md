@@ -9,7 +9,7 @@ This assignment builds upon assignment 3. The purpose of this assignment is to i
 
 
 ## Conclusion
-Here are the rough number of exits that occurred between nested and shadow paging. 
+Here are the rough number of key exits that occurred between nested and shadow paging. 
 
 |Exit Type| Nested      |  > or < | Shadow     |
 | :---:  | :---:       |    :----:   |    :---:      |
@@ -19,6 +19,8 @@ Here are the rough number of exits that occurred between nested and shadow pagin
 | WRMSR (32) | 36k | < | 54k |
 | CPUID (10) | 19.3k | > | 18.9k |
 | EPT Violation (48) | 269k | > | 259k | 
+
+The rest of the exit types not listed share similar exit values.
 
 ## Followup Questions
 1.For each member in your team, provide 1 paragraph detailing what parts of the lab that member implemented / researched. (You may skip this question if you are doing the lab by yourself). 
