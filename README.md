@@ -34,7 +34,7 @@ insmod  /lib/modules/XXX/kernel/arch/x86/kvm/kvm-intel.ko ept=0
 cpuid -l 0x4FFFFFFF
 ```
 <br/>
-![](https://github.com/lindavy/Cmpe-283-Assignment4/blob/main/shadow_paging_output.jpeg)
+<img src="shadow_output.PNG" width="800" />
 
 ## Conclusion
 Here are the rough number of key exits that occurred between nested and shadow paging. 
