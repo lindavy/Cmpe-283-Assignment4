@@ -15,8 +15,7 @@ cpuid -l 0x4FFFFFFF
 
 ```
 <br/>
-![nested paging](./nested_paging_output.jpeg?raw=true)
-
+<img src="nested_paging_output.jpeg" width="800" />
 ## Shadow Paging
 1. Shutdown your test (inner) VM.
 2. Remove the ‘kvm-intel’ module from your running kernel: 
