@@ -14,6 +14,8 @@ From the inner VM, run the following (EPT)
 cpuid -l 0x4FFFFFFF
 
 ```
+<br/>
+![nested paging](./nested_paging_output.jpeg)
 
 ## Shadow Paging
 1. Shutdown your test (inner) VM.
@@ -32,6 +34,8 @@ insmod  /lib/modules/XXX/kernel/arch/x86/kvm/kvm-intel.ko ept=0
 ```
 cpuid -l 0x4FFFFFFF
 ```
+<br/>
+![shadow paging](./shadow_paging_output.jpeg)
 
 ## Conclusion
 Here are the rough number of key exits that occurred between nested and shadow paging. 
@@ -54,7 +58,7 @@ The rest of the exit types not listed share similar exit values.
 
 3. What did you learn from the count of exits? Was the count what you expected? If not, why not? 
 
-Based on our output, shadow paging has more exits than nested paging. We expected the number of exits related to memory writing/reading should increase in shadow paging since #PF exiting is enabled. For instructions that attempt to access memory, more exits will happen if the entry doesn't exist in the TLB. As shown in the table and screenshots above, shadow paging has significantly more exits for interrupt values 12, 3, 32.  
+Based on our output, shadow paging has more exits than nested paging for exit types 12, 3 and 32. We expected the number of exits related to memory writing/reading should increase in shadow paging since #PF exiting is enabled. For instructions that attempt to access memory, more exits will happen if the entry doesn't exist in the TLB. As shown in the table and screenshots above, shadow paging has significantly more exits for interrupt values 12, 3, 32.  
 
 4.What changed between the two runs (ept vs no-ept)?
 
