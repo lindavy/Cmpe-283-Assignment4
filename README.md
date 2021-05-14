@@ -15,7 +15,7 @@ cpuid -l 0x4FFFFFFF
 
 ```
 <br/>
-![nested paging](./nested_paging_output.jpeg)
+![nested paging](./nested_paging_output.jpeg?raw=true)
 
 ## Shadow Paging
 1. Shutdown your test (inner) VM.
@@ -35,7 +35,7 @@ insmod  /lib/modules/XXX/kernel/arch/x86/kvm/kvm-intel.ko ept=0
 cpuid -l 0x4FFFFFFF
 ```
 <br/>
-![shadow paging](shadow_paging_output.jpeg)
+![shadow paging](./shadow_paging_output.jpeg)
 
 ## Conclusion
 Here are the rough number of key exits that occurred between nested and shadow paging. 
