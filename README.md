@@ -22,7 +22,7 @@ cpuid -l 0x4FFFFFFF
 1. Shutdown your test (inner) VM.
 2. Remove the ‘kvm-intel’ module from your running kernel: 
 ```
-rmmod kvm-intel.ko
+rmmod kvm-intel
 ```
 
 3. Reload the kvm-intel module with the parameter ept=0 (this will disable nested paging and force KVM to use shadow paging instead). The module you want is usually found in /lib/modules/XXX/kernel/arch/x86/kvm, where XXX is the version of the kernel you build for assignment 3 – don’t make a mistake and use the one that came with the stock Linux installation.
